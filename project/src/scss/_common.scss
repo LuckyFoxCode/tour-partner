@@ -5,7 +5,12 @@ body {
     min-height: 100vh;
 }
 
-body {}
+body {
+	background-color: $white;
+	color: $black;
+	font-family: $main-font;
+	font-size: $base-size;
+}
 
 h1,
 h2,
