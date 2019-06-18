@@ -1,7 +1,7 @@
  $(".slider-team").owlCarousel({
     items: 4,
     margin: 30,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 600,
     autoplayTimeout : 3000,
     autoplayHoverPause: true,
