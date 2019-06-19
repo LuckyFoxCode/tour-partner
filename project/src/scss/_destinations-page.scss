@@ -24,6 +24,12 @@ $styles: destinations-page;
     position: relative;
     transition: all .2s ease;
 
+    &.row-card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
     &:hover {
       box-shadow: $shadow;
       transform: translateY(-10px);
@@ -49,6 +55,13 @@ $styles: destinations-page;
   &__card-img-wrapper {
     @include padding-hack(74%);
     margin-bottom: 16px;
+    &.resized {
+      $size: 300px;
+      width: $size;
+      height: $size;
+      margin-right: 40px;
+      padding-top: 27px;
+    }
   }
 
   &__card-title {
@@ -98,67 +111,9 @@ $styles: destinations-page;
     @include text-styling($tour-item, 600, $g2);
   }
 
-  &__btn {
-    display: block;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 12px 45px;
-    background-color: $g1;
-    @include text-styling($top-menu-size, 400, $white);
-    border: none;
-    border-radius: 20px;
+  .tour-btn {
     margin: auto;
-    transition: transform .2s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    @media screen and (max-width: 769px) {
-      width: 100%;
-    }
   }
-
-  // .dropdown {
-  //   &__btn {
-  //     width: 100%;
-  //     background-color: $bg-header-form;
-  //     @include text-styling($small-size, 400, $g2);
-  //     border: none;
-  //     padding: 6px 17px;
-  //     text-align: left;
-  //     position: relative;
-  //     &:after {
-  //       $size: 10px;
-  //       content: "";
-  //       top: 50%;
-  //       transform: translateY(-50%) rotate(45deg);
-  //       right: 40px;
-  //       display: inline-block;
-  //       width: $size;
-  //       height: $size;
-  //       border: 1px solid $g2;
-  //       border-top: none;
-  //       border-left: none;
-  //     }
-  //   }
-
-  //   .dropdown-menu {
-  //     width: 100%;
-  //     padding: 8px 16px 40px;
-  //   }
-
-  //   .dropdown-item {
-  //     @include text-styling($small-size, 400, $g2);
-  //     padding-bottom: 8px;
-  //     border-bottom: 1px solid $g2;
-  //     text-align: right;
-
-  //     &:hover {
-
-  //     }
-  //   }
-  // }
 
   .dropdown {
     width: 100%;
@@ -266,4 +221,9 @@ $styles: destinations-page;
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+#boxWiew {
+  &>*{
+    transition: all .2s ease;
+  }
 }
