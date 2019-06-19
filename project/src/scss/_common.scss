@@ -44,5 +44,19 @@ a {
 		text-decoration: none;
 	}
 }
+
+.mb-80 {
+	margin-bottom: 80px;
+	@media screen and (max-width: 769px) {
+		margin-bottom: 0;
+	}
+}
+
+.mb-110 {
+	margin-bottom: 110px;
+	@media screen and (max-width: 769px) {
+		margin-bottom: 30px;
+	}
+}
 /* End MAIN STYLE
 ----------------- */

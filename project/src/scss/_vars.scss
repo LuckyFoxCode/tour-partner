@@ -82,6 +82,13 @@ $footer-address: px_to_rem(24px);
 
 @font-face {
 	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Semibold.ttf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
 	src: url('../fonts/OpenSans-Bold.ttf') format('opentype');
 	font-weight: 700;
 	font-style: normal;
