@@ -90,7 +90,7 @@ gulp.task(task.dev.css, () => {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass().on('error', $.notify.onError("SASS-Error: <%= error.message %>")))
 		.pipe($.autoprefixer({
-			browsers: ['last 2 versions'],
+			// browsers: ['last 2 versions'],
 			cascade: false
 		}))
 		.pipe($.csscomb())

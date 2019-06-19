@@ -36,5 +36,13 @@ ul {
 .footer {
 	flex: 0 0 auto;
 }
+
+a {
+	display: block;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
 /* End MAIN STYLE
 ----------------- */
