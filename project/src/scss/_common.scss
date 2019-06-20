@@ -36,5 +36,24 @@ ul {
 .footer {
 	flex: 0 0 auto;
 }
+.tour-btn {
+	display: block;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 12px 45px;
+	background-color: $g1;
+	@include text-styling($top-menu-size, 400, $white);
+	border: none;
+	border-radius: 20px;
+	transition: transform .2s ease;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	@media screen and (max-width: 769px) {
+		width: 100%;
+	}
+}
 /* End MAIN STYLE
 ----------------- */
