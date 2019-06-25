@@ -23,6 +23,14 @@ ul {
 	margin: 0;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
+.pt-30 {
+	padding-top: 30px;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -36,5 +44,6 @@ ul {
 .footer {
 	flex: 0 0 auto;
 }
+
 /* End MAIN STYLE
 ----------------- */

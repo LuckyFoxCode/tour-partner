@@ -1,0 +1,162 @@
+/* HEADER STYLE
+--------------- */
+.header {
+	min-height: 100vh;
+	background: url('../img/header-main.jpg') no-repeat;
+	background-size: cover;
+
+	&__top {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+		&-logo {
+			display: flex;
+			justify-content: center;
+			@include text-styling($large-size, 400, $white);
+			text-transform: capitalize;
+		}
+
+		&-nav {
+			display: flex;
+			justify-content: space-between;
+
+			&-item {
+				position: relative;
+
+				&:hover .active {
+					content: '';
+					display: flex;
+					position: absolute;
+					top: -60px;
+					left: 50%;
+					transform: translateX(-50%);
+					height: 60px;
+					width: 1px;
+					background-color: $white;
+				}
+			}
+
+			&-link {
+				@include text-styling($top-menu-size, 400, $white);
+			}
+		}
+
+		&-phone {
+			display: flex;
+			justify-content: center;
+			@include text-styling($middle-size, 400, $white);
+		}
+
+		.active::before {
+			content: '';
+			display: flex;
+			position: absolute;
+			top: -61px;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 60px;
+			width: 1px;
+			background-color: $white;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		padding-top: 140px;
+
+		&-title {
+			@include text-styling($header-title, 400, $white);
+			text-align: center;
+			margin-bottom: 70px;
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba($white, 0.26);
+			width: 100%;
+			border-radius: 12px;
+			padding: 20px 60px 80px;
+
+			&-title {
+				@include text-styling($middle-size, 400, $black);
+				text-align: center;
+				width: 255px;
+				border-radius: 10px 10px 0 0;
+				background-color: $white;
+				padding: 10px 0;
+			}
+
+			&-wrapper {
+				background-color: $white;
+				width: 100%;
+				padding: 15px 30px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&-info {
+				background-color: $bg-header-form;
+				border: none;
+				padding: 0 15px;
+
+				@include placeholder {
+					color: $g2;
+				}
+			}
+
+			&-btn {
+				background-color: $g1;
+				padding: 10px 40px;
+				border-radius: 20px;
+				text-align: center;
+				@include text-styling($top-menu-size, 400, $white);
+				text-transform: uppercase;
+				border: none;
+			}
+		}
+	}
+
+	.fixed {
+		width: 100%;
+		max-width: 1140px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: rgba(24, 24, 24, .6);
+		padding-bottom: 35px;
+	}
+}
+
+.header-bottom {
+
+	&__card {
+		display: flex;
+		align-items: center;
+		padding-top: 100px;
+
+		&-icon {
+			margin-right: 25px;
+		}
+
+		&-wrap {
+			&-title {
+				@include text-styling($middle-size, 400, $black);
+				text-transform: capitalize;
+				margin-bottom: 5px;
+			}
+
+			&-text {
+				font-family: $sec-font;
+				color: $g2;
+			}
+		}
+	}
+}
+
+/* END HEADER STYLE
+------------------- */
