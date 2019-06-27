@@ -1,0 +1,96 @@
+.about-us-chernyshenko
+{
+	max-width: 1920px;
+	width: 100%;
+	padding: 112px;
+	background-image: url('../img/сoliseum.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	object-fit: cover;
+	max-height: 833px;
+
+
+	.team {@media(max-width: 769px){padding-top: 20px;}
+	position: relative;
+	min-height:405px;
+	background: $white;
+}
+.title-text {padding-bottom: 100px;
+	p{color: $white;
+		font-size: $small-size;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+	}
+	h2{color: $white;
+		font-size: $huge-size;
+		font-family: 'Oswald';
+		src: url('../fonts/Oswald-Regular.ttf') format('opentype');
+		font-weight: 400;
+		font-style: normal;
+
+	}
+}
+
+
+
+.img-wrapp{
+	min-height:195px;
+	position: relative;
+	padding-top: 67%;
+	width: 100%;
+}
+.team-img {
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+.team-text {
+	padding: 30px;
+	h3 {
+		font-weight: 500;
+		font-size: $large-size;
+		padding-bottom: 0;
+		text-align: center;
+		padding: 30px;
+
+	}
+	p {
+		font-size: $base-size;
+		margin-bottom: 0;
+		text-align: center;
+		line-height: 26px;
+		color:#72728c;
+		font-family: 'Open Sans';
+		src: url('../fonts/OpenSans-Light.ttf') format('opentype');
+		font-weight: 300;
+		font-style: normal;
+
+	}
+}
+
+
+span {
+	z-index: 10;
+	position: absolute;
+	transform: translateX(-50%);
+	top:-37.5px;
+	left:50%;
+	background: $white;
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+}
