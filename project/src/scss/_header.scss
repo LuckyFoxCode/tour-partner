@@ -1,158 +1,305 @@
 /* HEADER STYLE
 --------------- */
 .header {
-	min-height: 100vh;
-	background: url('../img/header-main.jpg') no-repeat;
-	background-size: cover;
+	&__wrap {
+		background: url('../img/header-main.jpg') no-repeat;
+		background-size: cover;
+		padding: 20px 0 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media all and (min-width: 768px) {
+			padding-bottom: 100px;
+		}
+
+		@media all and (min-width: 992px) {
+			min-height: 100vh;
+		}
+	}
+
+	.fixed__top {
+		background-color: rgba($black, 0.5);
+		transition: all .3s ease;
+	}
 
 	&__top {
+		position: fixed;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		position: relative;
+		z-index: 2;
+
+
 
 		&-logo {
-			display: flex;
-			justify-content: center;
-			@include text-styling($large-size, 400, $white);
+			@include text-styling($large-size, 500, $white);
 			text-transform: capitalize;
+
+			&:hover {
+				color: $white;
+			}
 		}
 
-		&-nav {
+		&-list {
 			display: flex;
 			justify-content: space-between;
-
-			&-item {
-				position: relative;
-
-				&:hover .active {
-					content: '';
-					display: flex;
-					position: absolute;
-					top: -60px;
-					left: 50%;
-					transform: translateX(-50%);
-					height: 60px;
-					width: 1px;
-					background-color: $white;
-				}
-			}
-
-			&-link {
-				@include text-styling($top-menu-size, 400, $white);
-			}
-		}
-
-		&-phone {
-			display: flex;
-			justify-content: center;
-			@include text-styling($middle-size, 400, $white);
+			width: 100%;
 		}
 
 		.active::before {
 			content: '';
-			display: flex;
 			position: absolute;
-			top: -61px;
-			left: 50%;
-			transform: translateX(-50%);
-			height: 60px;
 			width: 1px;
+			height: 40px;
 			background-color: $white;
+			top: -40px;
+			left: 50%;
+		}
+
+		&-link {
+			position: relative;
+			@include text-styling($top-menu-size, 400, $white);
+			text-transform: capitalize;
+			transition: color .3s ease;
+
+			&:hover::before {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 40px;
+				background-color: $white;
+				top: -40px;
+				left: 50%;
+			}
+
+			&:hover {
+				color: $g2;
+			}
+		}
+
+		&-tel {
+			@include text-styling($middle-size, 500, $white);
+
+			@media all and (max-width: 991px) {
+				display: none;
+			}
+
+			&:hover {
+				color: $white;
+			}
 		}
 	}
 
 	&__content {
-		width: 100%;
-		padding-top: 140px;
+		padding-top: 120px;
+		position: relative;
+
+		&-wrap {
+			margin-bottom: 20px;
+
+			@media all and (min-width: 768px) {
+				margin-bottom: 50px;
+			}
+
+			@media all and (min-width: 992px) {
+				margin-bottom: 80px;
+			}
+		}
 
 		&-title {
-			@include text-styling($header-title, 400, $white);
-			text-align: center;
-			margin-bottom: 70px;
+			@include text-styling(2.3rem, 400, $white);
+
+			@media all and (min-width: 768px) {
+				@include text-styling(5.5rem, 400, $white);
+			}
+
+			@media all and (min-width: 992px) {
+				@include text-styling(6rem, 400, $white);
+			}
+
+			@media all and (min-width: 1200px) {
+				@include text-styling($header-title, 400, $white);
+			}
 		}
 
 		&-form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
 			background-color: rgba($white, 0.26);
-			width: 100%;
 			border-radius: 12px;
-			padding: 20px 60px 80px;
+			padding: 20px;
 
-			&-title {
+			@media all and (min-width: 768px) {
+				padding: 30px 20px;
+			}
+
+			@media all and (min-width: 992px) {
+				padding: 20px 50px 80px;
+			}
+
+			&_title {
 				@include text-styling($middle-size, 400, $black);
-				text-align: center;
-				width: 255px;
-				border-radius: 10px 10px 0 0;
 				background-color: $white;
-				padding: 10px 0;
+				border-radius: 10px 10px 0px 0px;
+				padding: 10px 0px;
 			}
 
-			&-wrapper {
+			&_wrap {
 				background-color: $white;
-				width: 100%;
-				padding: 15px 30px;
-				display: flex;
-				justify-content: space-between;
+				padding-bottom: 20px;
+				border-radius: 10px 10px;
+
+				@media all and (min-width: 992px) {
+					padding-bottom: 0;
+					border-radius: none;
+				}
 			}
 
-			&-info {
-				background-color: $bg-header-form;
+			&_inpt {
+				color: $g2;
 				border: none;
-				padding: 0 15px;
+				padding: 10px 15px;
+				background-color: $bg-header-form;
+				width: 100%;
 
 				@include placeholder {
 					color: $g2;
 				}
 			}
 
-			&-btn {
-				background-color: $g1;
-				padding: 10px 40px;
-				border-radius: 20px;
-				text-align: center;
+			.city {
+				@media all and (min-width: 992px) {
+					max-width: 250px;
+				}
+			}
+
+			.date {
+				@media all and (min-width: 992px) {
+					max-width: 160px;
+				}
+			}
+
+			.budget {
+				@media all and (min-width: 992px) {
+					max-width: 190px;
+				}
+			}
+
+			&_btn {
+				width: 100%;
 				@include text-styling($top-menu-size, 400, $white);
 				text-transform: uppercase;
-				border: none;
+				background-color: $g1;
+				border-radius: 20px;
+				padding: 10px 0;
+				transition: color .3s ease;
+
+				&:hover {
+					color: $g2;
+				}
 			}
 		}
 	}
 
-	.fixed {
-		width: 100%;
-		max-width: 1140px;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background: rgba(24, 24, 24, .6);
-		padding-bottom: 35px;
-	}
-}
+	&__right-menu {
+		position: absolute;
+		display: none;
+		top: 50%;
+		right: 30px;
+		z-index: 1;
 
-.header-bottom {
-
-	&__card {
-		display: flex;
-		align-items: center;
-		padding-top: 100px;
-
-		&-icon {
-			margin-right: 25px;
+		@media all and (min-width: 992px) {
+			display: block;
 		}
 
-		&-wrap {
-			&-title {
-				@include text-styling($middle-size, 400, $black);
+		transform: translateY(-50%);
+
+		&_list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&_item {
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&_link {
+			@include text-styling($top-menu-size, 400, $white);
+			display: flex;
+			justify-content: flex-end;
+			text-transform: capitalize;
+			transition: color .3s ease;
+
+			&:hover {
+				color: $g2;
+			}
+		}
+
+		&_text {
+			margin-right: 30px;
+		}
+	}
+
+	&__bottom {
+		background-color: $white;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: none;
+			top: 70px;
+			left: 0;
+			right: 0;
+			width: 100%;
+			min-height: 480px;
+			background: url('../img/header-main.png')no-repeat center;
+			background-size: 100%;
+			transform: translateY(-50%);
+
+			@media all and (min-width: 992px) {
+				display: block;
+			}
+		}
+
+		&-wrapper {
+			padding: 30px 0;
+
+			@media all and (min-width: 768px) {
+				padding: 50px 0;
+			}
+
+			@media all and (min-width: 992px) {
+				padding: 100px 0;
+			}
+
+		}
+
+		&-card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media all and (min-width: 992px) {}
+
+			&_icon {
+				margin-right: 15px;
+			}
+
+			&_wrap {
+				padding-top: 20px;
+			}
+
+			&_title {
+				@include text-styling($middle-size, 500, $g1);
 				text-transform: capitalize;
 				margin-bottom: 5px;
 			}
 
-			&-text {
+			&_text {
 				font-family: $sec-font;
-				color: $g2;
+				@include text-styling($base-size, 300, $g2);
 			}
 		}
 	}
