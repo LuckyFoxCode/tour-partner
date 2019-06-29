@@ -18,6 +18,7 @@ window.onscroll = () => {
 	} else {
 		$(".header").removeClass("scroll_head");
 	}
+}
 
 let map;
 let marker;
