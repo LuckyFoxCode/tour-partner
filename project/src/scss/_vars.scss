@@ -80,9 +80,27 @@ $footer-address: px_to_rem(24px);
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Semibold.ttf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Bold.ttf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
 //FONTS:
 
 $main-font: 'Oswald',
 sans-serif;
 $sec-font: 'Open Sans',
 sans-serif;
+
+//HOVER SHADOW
+
+$shadow: 3px -3px 10px 0 rgba(128,142,152,0.10);
