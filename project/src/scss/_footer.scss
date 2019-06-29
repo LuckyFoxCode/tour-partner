@@ -1,0 +1,204 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('../img/bg-footer.jpg') no-repeat;
+	background-size: cover;
+	padding: 150px 0 130px 0;
+
+	@media all and (max-width: 767px) {
+		padding: 60px 5px 30px 5px;
+	}
+
+	&__title {
+		font-family: $main-font;
+		font-size: $footer-title;
+		text-align: center;
+		color: $white;
+		margin-bottom: 15px;
+
+		@media all and (max-width: 767px) {
+			font-size: $large-size;
+		}
+	}
+
+	&__subtitle {
+		font-family: $sec-font;
+		font-weight: 300;
+		font-size: $middle-size;
+		text-align: center;
+		color: $white;
+
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+		}
+	}
+
+	.footer-mb-80 {
+		margin-bottom: 80px;
+
+		@media all and (max-width: 767px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+
+		@media all and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-style: italic;
+		color: $white;
+	}
+
+	&:-moz-placeholder {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-style: italic;
+		color: $white;
+	}
+
+	&::-moz-placeholder {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-style: italic;
+		color: $white;
+	}
+
+	&:-ms-input-placeholder {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-style: italic;
+		color: $white;
+	}
+
+	[type="text"],
+	[type="email"] {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-style: italic;
+		color: $white;
+		background-color: rgba(255,255,255, 0.5);
+		padding: 14px 22px 17px 22px;
+		border: none;
+		transition: all .2s ease;
+
+		&:hover,
+		&:active {
+			cursor: pointer;
+			background-color: rgba(255,255,255, 0.7);
+		}
+
+		@media all and (max-width: 767px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	[type="text"] {
+		width: 30%;
+
+		@media all and (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	[type="email"] {
+		width: 50%;
+
+		@media all and (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	[type="submit"] {
+		width: 15%;
+		font-family: $main-font;
+		font-size: $top-menu-size;
+		text-align: center;
+		line-height: 24px;
+		text-transform: uppercase;
+		border: none;
+		background-color: rgba(255,255,255, 0.5);
+		color: $white;
+		padding: 14px;
+		border-radius: 20px;
+		transition: all .2s ease;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgba(255,255,255, 0.8);
+			color: darken($white, 60%);
+		}
+
+		@media all and (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		color: $white;
+	}
+
+	&__icon--title {
+		font-family: $main-font;
+		font-size: $footer-address;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: row;
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-weight: 300;
+		line-height: 26px;
+	}
+
+	.img-wrapper {
+		$size: 71px;
+		max-width: $size;
+		height: $size;
+		@include padding-hack ($size, cover);
+		margin-bottom: 20px;
+	}
+
+	.mobile_margin {
+		@media all and (max-width: 767px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__link {
+		font-family: $sec-font;
+		font-size: $base-size;
+		font-weight: 300;
+		line-height: 26px;
+		text-decoration: none;
+		color: $white;
+		transition: all .2s ease;
+
+		&:hover {
+			color: $white;
+			font-weight: 700;
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	.description_margin {
+		margin-right: 5px;
+	}
+}
