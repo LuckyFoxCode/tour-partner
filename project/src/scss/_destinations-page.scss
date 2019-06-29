@@ -1,0 +1,229 @@
+$styles: destinations-page;
+
+.#{$styles} {
+  padding: 110px 0;
+
+  @media screen and (max-width: 769px) {
+    padding: 30px 0;
+  }
+
+  &__subtitle {
+    @include text-styling($small-size, 400, $g2);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  &__title {
+    @include text-styling($huge-size, 400, $g1);
+  }
+
+  &__card {
+    color: $g1;
+    font-family: $sec-font;
+    padding-bottom: 16px;
+    position: relative;
+    transition: all .2s ease;
+
+    &.row-card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &:hover {
+      box-shadow: $shadow;
+      transform: translateY(-10px);
+    }
+  }
+
+  &__card.offer {
+    &::before {
+      $position: 24px;
+      content: "Special Offer";
+      display: block;
+      padding: 4px 12px;
+      background-color: $black;
+      position: absolute;
+      top: $position;
+      left: $position;
+      z-index: 1;
+      @include text-styling($middle-size, 400, $white);
+      font-family: $main-font;
+    }
+  }
+
+  &__card-img-wrapper {
+    @include padding-hack(74%);
+    margin-bottom: 16px;
+    &.resized {
+      $size: 300px;
+      width: $size;
+      height: $size;
+      margin-right: 40px;
+      padding-top: 27px;
+    }
+  }
+
+  &__card-title {
+    @include text-styling($large-size, 400, $g1);
+    font-family: $main-font;
+    margin-bottom: 5px;
+  }
+
+  &__card-description {
+    color: $g2;
+    margin-bottom: 16px;
+  }
+
+  &__card-price {
+    @include text-styling($top-menu-size, 700, $g1);
+    margin-bottom: 30px;
+  }
+
+  &__card-list {}
+
+  &__card-item {
+    padding-left: 40px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      $size: 8px;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: $size;
+      height: $size;
+      background-color: $g1;
+      border-radius: 50%;
+    }
+  }
+
+  &__card-text {
+    font-family: $sec-font;
+    @include text-styling($tour-item, 600, $g2);
+  }
+
+  .tour-btn {
+    margin: auto;
+  }
+
+  .dropdown {
+    width: 100%;
+    background-color: $bg-header-form;
+    @include text-styling($small-size, 400, $g2);
+    border: none;
+    padding: 6px 17px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+
+    &:after {
+      $size: 10px;
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-80%) rotate(45deg);
+      right: 20px;
+      display: inline-block;
+      width: $size;
+      height: $size;
+      border: 2px solid $g2;
+      border-top: none;
+      border-left: none;
+      pointer-events: none;
+    }
+
+    &__menu {
+      &.is-active {
+        display: block;
+      }
+
+      pointer-events: all;
+      display: none;
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      background-color: $white;
+      z-index: 10;
+      width: 100%;
+      padding: 8px 16px 40px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    &__menu-inner {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    &__layer {
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    &__item {
+      @include text-styling($small-size, 400, $g2);
+      padding-bottom: 8px;
+      border-bottom: 1px solid $g2;
+      text-align: right;
+      margin-bottom: 8px;
+      transition: color .2s ease;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: $icon;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+#boxWiew {
+  &>*{
+    transition: all .2s ease;
+  }
+}

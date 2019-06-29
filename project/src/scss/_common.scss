@@ -37,24 +37,48 @@ ul {
 	flex: 0 0 auto;
 }
 
+
+a {
+	display: block;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.mb-80 {
+	margin-bottom: 80px;
+	@media screen and (max-width: 769px) {
+		margin-bottom: 0;
+	}
+}
+
+.mb-110 {
+	margin-bottom: 110px;
+	@media screen and (max-width: 769px) {
+		margin-bottom: 30px;
+	}
+}
+
 .tour-btn {
-    display: block;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 12px 45px;
-    background-color: $g1;
-    @include text-styling($top-menu-size, 400, $white);
-    border: none;
-    border-radius: 20px;
-     transition: transform .2s ease;
+	display: block;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 12px 45px;
+	background-color: $g1;
+	@include text-styling($top-menu-size, 400, $white);
+	border: none;
+	border-radius: 20px;
+	 transition: transform .2s ease;
 
-    &:hover {
-        transform: scale(1.05);
-    }
+	&:hover {
+		transform: scale(1.05);
+	}
 
-    @media screen and (max-width: 769px) {
-        width: 100%;
-    }
+	@media screen and (max-width: 769px) {
+		width: 100%;
+	}
+
 }
 /* End MAIN STYLE
 ----------------- */
