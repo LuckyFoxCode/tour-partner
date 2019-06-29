@@ -90,7 +90,7 @@
 		content: "";
 		display: block;
 		position: absolute;
-		background-image: url(../img/head_about.jpg);
+		background-image: url("../img/head_about.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
@@ -98,7 +98,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: -3;
+		// z-index: -3;
 	}
 	&__choose {
 		@media (max-width: 1260px) {

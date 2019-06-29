@@ -1,16 +1,16 @@
-$(document).ready(function() {
-	if ($(".menu_bar").css("display") == "none") {
-		$(".head__items_link").show();
-	}
-	$(".menu_bar").click(function() {
-		if ($(".head__items_link").css("display") == "none") {
-			$(".head__items_link").show();
-		}
-		else {
-			$(".head__items_link").hide();
-		}
-	});
-});
+// $(document).ready(function() {
+// 	if ($(".menu_bar").css("display") == "none") {
+// 		$(".head__items_link").show();
+// 	}
+// 	$(".menu_bar").click(function() {
+// 		if ($(".head__items_link").css("display") == "none") {
+// 			$(".head__items_link").show();
+// 		}
+// 		else {
+// 			$(".head__items_link").hide();
+// 		}
+// 	});
+// });
 
 window.onscroll = () => {
 	if (window.pageYOffset >= 1){
@@ -18,86 +18,90 @@ window.onscroll = () => {
 	} else {
 		$(".header").removeClass("scroll_head");
 	}
-}
+};
 
- $({someValue: 0}).animate({someValue: 17}, {
- 	duration: 2000,
- 	easing:'swing',
- 	step: function() {
- 		$('#17').text(commaSeparateNumber(Math.round(this.someValue)));
- 	}
- });
+//  $({someValue: 0}).animate({someValue: 17}, {
+//  	duration: 2000,
+//  	easing:'swing',
+//  	step: function() {
+//  		$('#17').text(commaSeparateNumber(Math.round(this.someValue)));
+//  	}
+//  });
 
- function commaSeparateNumber(val){
- 	while (/(\d+)(\d{3})/.test(val.toString())){
- 		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
- 	}
- 	return val;
- }
- $({someValue: 0}).animate({someValue: 213}, {
- 	duration: 2000,
- 	easing:'swing',
- 	step: function() {
- 		$('#213').text(commaSeparateNumber(Math.round(this.someValue)));
- 	}
- });
+//  function commaSeparateNumber(val){
+//  	while (/(\d+)(\d{3})/.test(val.toString())){
+//  		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+//  	}
+//  	return val;
+//  }
+//  $({someValue: 0}).animate({someValue: 213}, {
+//  	duration: 2000,
+//  	easing:'swing',
+//  	step: function() {
+//  		$('#213').text(commaSeparateNumber(Math.round(this.someValue)));
+//  	}
+//  });
 
- function commaSeparateNumber(val){
- 	while (/(\d+)(\d{3})/.test(val.toString())){
- 		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
- 	}
- 	return val;
- }
- $({someValue: 0}).animate({someValue: 11923}, {
- 	thousandSeparator: " ",
- 	duration: 1500,
- 	easing:'swing',
- 	step: function() {
- 		$('#11923').text(commaSeparateNumber(Math.round(this.someValue)));
- 	}
- });
+//  function commaSeparateNumber(val){
+//  	while (/(\d+)(\d{3})/.test(val.toString())){
+//  		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+//  	}
+//  	return val;
+//  };
 
- function commaSeparateNumber(val){
- 	while (/(\d+)(\d{3})/.test(val.toString())){
- 		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
- 	}
- 	return val;
- }
- $({someValue: 0}).animate({someValue: 15}, {
- 	duration: 2000,
- 	easing:'swing',
- 	step: function() {
- 		$('#15').text(commaSeparateNumber(Math.round(this.someValue)));
- 	}
- });
+//  $({someValue: 0}).animate({someValue: 11923}, {
+//  	thousandSeparator: " ",
+//  	duration: 1500,
+//  	easing:'swing',
+//  	step: function() {
+//  		$('#11923').text(commaSeparateNumber(Math.round(this.someValue)));
+//  	}
+//  });
 
- function commaSeparateNumber(val){
- 	while (/(\d+)(\d{3})/.test(val.toString())){
- 		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
- 	}
- 	return val;
- }
+//  function commaSeparateNumber(val){
+//  	while (/(\d+)(\d{3})/.test(val.toString())){
+//  		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+//  	}
+//  	return val;
+//  };
 
- $(".slider-team").owlCarousel({
-    items: 4,
-    margin: 30,
-    autoplay: true,
-    autoplaySpeed: 600,
-    autoplayTimeout : 3000,
-    autoplayHoverPause: true,
-    loop: true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        768:{
-            items:2,
-        },
-        992:{
-            items:3,
-        },
-        1200:{
-            items:4,
-        },
-    }
+//  $({someValue: 0}).animate({someValue: 15}, {
+//  	duration: 2000,
+//  	easing:'swing',
+//  	step: function() {
+//  		$('#15').text(commaSeparateNumber(Math.round(this.someValue)));
+//  	}
+//  });
+
+//  function commaSeparateNumber(val){
+//  	while (/(\d+)(\d{3})/.test(val.toString())){
+//  		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+//  	}
+//  	return val;
+//  };
+
+$(document).ready( function() {
+    $(".slider-team").owlCarousel({
+        items: 4,
+        margin: 30,
+        autoplay: true,
+        autoplaySpeed: 600,
+        autoplayTimeout : 3000,
+        autoplayHoverPause: true,
+        loop: true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items:2,
+            },
+            992:{
+                items:3,
+            },
+            1200:{
+                items:4,
+            },
+        }
+    });
 });
