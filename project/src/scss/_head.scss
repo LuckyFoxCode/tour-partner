@@ -78,16 +78,9 @@
 	}
 }
 
-.main_head {
-	color: $white;
-	text-align: center;
-	font-size: $header-title;
-	margin-bottom: 9.7vh;
-}
-
 .search {
-	min-height: 84.64vh;
-	padding: 25.4vh 0 10.15vh 0;
+	min-height: 63vh;
+	padding-top: 30vh;
 	position: relative;
 	&_row {
 		position: relative;
@@ -97,7 +90,7 @@
 		content: "";
 		display: block;
 		position: absolute;
-		background-image: url(../img/head_home.jpg);
+		background-image: url(../img/head_about.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
@@ -106,22 +99,6 @@
 		right: 0;
 		bottom: 0;
 		z-index: -3;
-	}
-	&:after {
-		@media (max-width: 991px) {
-			display: none;
-		}
-		content: "";
-		display: block;
-		position: absolute;
-		background-image: url(../img/head_img_2.png);
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		left: 0;
-		right: 0;
-		bottom: -350px;
-		z-index: -1;
-		min-height: 480px;
 	}
 	&__choose {
 		@media (max-width: 1260px) {
@@ -136,35 +113,6 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-	}
-	.fast {
-		&_list {
-			@media (max-width: 1200px) {
-				display: none;
-			} 
-			display: flex;
-			position: absolute;
-			flex-direction: column;
-			justify-content: space-between;
-			min-height: 136px;
-			text-align: right;
-			top: -100px;
-			right: 90px;
-			z-index: 10;
-		}
-
-		&_items {
-			color: $white;
-			font-size: $top-menu-size;
-			.link:hover {
-				color: $white;
-				text-decoration-color: $white;
-			}
-
-			.text {
-				margin-right: 35px;
-			}
-		}
 	}
 
 	&__form {
@@ -215,50 +163,6 @@
 				max-width: 190px;
 			}
 		}
-	}
-}
-
-.about_service {
-	&_cont {
-		min-height: 330px;
-	}
-	&_col {
-		display: flex;
-		@media (max-width: 991px) {
-			flex-direction: column;
-		}
-	}
-	&_img {
-		width: 85px;
-		height: 85px;
-		margin-right: 20px;
-	}
-	&_text {
-		@media (max-width: 992px) {
-			justify-content: flex-start;
-			margin: 0;
-			padding-top: 10px;
-		}
-		margin-bottom: -10px;
-		min-height: 85px;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		&_head {
-			font-size: $middle-size;
-			color: $g1;
-			margin-bottom: 10px;
-		}
-		&_text {
-			font-family: $sec-font;
-			color: $g2;
-		}
-	}
-	&_line {
-		width: 100%;
-		height: 2px;
-		background-color: #E4E6E8;
-		margin-bottom: 20px;
 	}
 }
 
