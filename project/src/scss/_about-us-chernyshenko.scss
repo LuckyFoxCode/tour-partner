@@ -1,18 +1,17 @@
 .about-us-chernyshenko
+{@media(min-width: 769px){padding-top: 112px;}
+padding-top: 25px;
+max-width: 1920px;
+width: 100%;
+background-image: url('../img/сoliseum.jpg');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+object-fit: cover;
+max-height: 833px;
+
+.team
 {
-	max-width: 1920px;
-	width: 100%;
-	padding: 112px;
-	background-image: url('../img/сoliseum.jpg');
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	object-fit: cover;
-	max-height: 833px;
-
-
-	.team {@media(max-width: 769px){padding-top: 20px;}
 	position: relative;
-	min-height:405px;
 	background: $white;
 }
 .title-text {padding-bottom: 100px;
@@ -21,20 +20,19 @@
 		text-transform: uppercase;
 		letter-spacing: 0.2em;
 	}
-	h2{color: $white;
-		font-size: $huge-size;
-		font-family: 'Oswald';
-		src: url('../fonts/Oswald-Regular.ttf') format('opentype');
-		font-weight: 400;
-		font-style: normal;
+	h2{@media(min-width: 320px) and (max-width: 768px) {font-size: 2.8rem;}
+	color: $white;
+	font-size: $huge-size;
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Regular.ttf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
 
-	}
+}
 }
 
-
-
 .img-wrapp{
-	min-height:195px;
+
 	position: relative;
 	padding-top: 67%;
 	width: 100%;
@@ -52,32 +50,36 @@
 
 }
 
-.team-text {
-	padding: 30px;
-	h3 {
-		font-weight: 500;
-		font-size: $large-size;
-		padding-bottom: 0;
-		text-align: center;
-		padding: 30px;
+.team-text
+{@media(min-width: 769px){padding: 30px;}
+@media(max-width: 769px){padding-top: 25px;}
 
-	}
-	p {
-		font-size: $base-size;
-		margin-bottom: 0;
-		text-align: center;
-		line-height: 26px;
-		color:#72728c;
-		font-family: 'Open Sans';
-		src: url('../fonts/OpenSans-Light.ttf') format('opentype');
-		font-weight: 300;
-		font-style: normal;
-
-	}
+h3
+{@media(min-width: 1024px){padding-bottom: 25px;}
+font-weight: 500;
+font-size: $large-size;
+padding: 20px;
+text-align: center;
 }
 
+p
+{@media(max-width: 767px){padding:10px 50px 50px 50px;}
+font-size: $base-size;
+margin-bottom: 0;
+text-align: center;
+line-height: 26px;
+color:#72728c;
+font-family: 'Open Sans';
+src: url('../fonts/OpenSans-Light.ttf') format('opentype');
+font-weight: 300;
+font-style: normal;
 
-span {
+}
+}
+
+span
+{@media (max-width: 1024px){width: 50px;
+	height: 50px;top:-25px;}
 	z-index: 10;
 	position: absolute;
 	transform: translateX(-50%);
@@ -90,7 +92,9 @@ span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	svg {@media(max-width: 1024px) {width: 20px;
+		height: 30px;}
+	}
 }
 
 }
