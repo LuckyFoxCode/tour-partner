@@ -1,11 +1,11 @@
 <header id="header" class="header">
 	<div class="header__top">
 		<div class="container">
-			<div class="row justify-content-between py-2 py-md-4">
-				<div class="col-md-6 col-lg-3 text-lg-center mb-2 mb-md-0 text-center text-md-left">
+			<div class="row justify-content-between align-items-end py-2 py-md-4">
+				<div class="col-6 col-md-3 mb-2 mb-md-0 text-left text-md-center text-md-left order-1">
 					<a href="/" class="header__top-logo">tour partner</a>
 				</div>
-				<div class="col-md-6 col-lg-6 d-flex align-items-center justify-content-between">
+				<div class="col-md-6 col-lg-6 d-flex align-items-center justify-content-between order-3 order-md-2">
 					<ul class="header__top-list">
 						<li class="header__top-item">
 							<a href="#" class="header__top-link active">home</a>
@@ -24,8 +24,10 @@
 						</li>
 					</ul> <!-- End .header__top-list -->
 				</div>
-				<div class="col-lg-3 d-flex align-items-center">
-					<a href="tel:+38099989900" class="header__top-tel">Call us: 099 98 99 00</a>
+				<div class="col-6 col-md-3 order-2 order-md-3 mb-2 mb-md-0">
+					<a href="tel:+38099989900" class="header__top-tel">
+						<p class="header__top-text">Call us:</p> <span class="header__top-number">099 98 99 00</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -60,27 +62,27 @@
 						</ul>
 					</div>
 					<div class="col-12">
-						<form action="#" name="search" class="header__content-form">
+						<form action="#" name="form-search" class="header__content-form">
 							<div class="row d-flex justify-content-center p-3">
 								<div class="col-lg-3 text-center">
 									<h3 class="header__content-form_title">Search for your trip</h3>
 								</div>
 								<div class="col-12">
-									<div class="row d-flex justify-content-between align-items-center header__content-form_wrap py-lg-3">
+									<div class="row d-flex justify-content-between align-items-center header__content-form_wrap py-3">
 										<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-											<input type="text" name="search" class="header__content-form_inpt city" placeholder="City"
+											<input type="text" name="city" class="header__content-form_inpt city" placeholder="City"
 												required>
 										</div>
 										<div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-											<input type="text" name="search" class="header__content-form_inpt date" placeholder="Departure"
+											<input type="text" name="departure" class="header__content-form_inpt date" placeholder="Departure"
 												required>
 										</div>
 										<div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-											<input type="text" name="search" class="header__content-form_inpt date" placeholder="Arrival"
+											<input type="text" name="arrival" class="header__content-form_inpt date" placeholder="Arrival"
 												required>
 										</div>
 										<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-											<input type="text" name="search" class="header__content-form_inpt budget" placeholder="Budget"
+											<input type="text" name="budget" class="header__content-form_inpt budget" placeholder="Budget"
 												required>
 										</div>
 										<div class="col-lg-2">
@@ -100,7 +102,7 @@
 			<div class="row header__bottom-wrapper">
 				<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 					<div class="header__bottom-card">
-						<img src="img/union.svg" alt="Icon" class="header__bottom-card_icon">
+						<img src="img/beach.svg" alt="Icon" class="header__bottom-card_icon pl-3 pl-md-0">
 						<div class="header__bottom-card_wrap">
 							<h3 class="header__bottom-card_title">top destinations</h3>
 							<p class="header__bottom-card_text">Nulla pretium tincidunt felis, nec.</p>
@@ -118,7 +120,7 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="header__bottom-card">
-						<img src="img/suitcase.svg" alt="Icon" class="header__bottom-card_icon">
+						<img src="img/suitcase.svg" alt="Icon" class="header__bottom-card_icon pl-3 pl-md-0">
 						<div class="header__bottom-card_wrap">
 							<h3 class="header__bottom-card_title">amazing services</h3>
 							<p class="header__bottom-card_text">Nulla pretium tincidunt felis, nec.</p>
