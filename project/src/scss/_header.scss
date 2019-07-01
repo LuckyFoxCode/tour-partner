@@ -47,12 +47,17 @@
 
 		.active::before {
 			content: '';
+			display: none;
 			position: absolute;
 			width: 1px;
 			height: 40px;
 			background-color: $white;
 			top: -40px;
 			left: 50%;
+
+			@media all and (min-width: 768px) {
+				display: block;
+			}
 		}
 
 		&-link {
