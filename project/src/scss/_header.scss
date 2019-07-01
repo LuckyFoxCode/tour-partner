@@ -2,8 +2,7 @@
 --------------- */
 .header {
 	&__wrap {
-		background: url('../img/header-main.jpg') no-repeat;
-		background-size: cover;
+		background: url('../img/header-about.jpg') no-repeat center/cover;
 		padding: 20px 0 50px;
 		display: flex;
 		align-items: center;
@@ -111,8 +110,20 @@
 	}
 
 	&__content {
-		padding-top: 120px;
 		position: relative;
+		padding-top: 60px;
+
+		@media all and (min-width: 768px) {
+			padding-top: 80px;
+		}
+
+		@media all and (min-width: 992px) {
+			padding-top: 100px;
+		}
+
+		@media all and (min-width: 1200px) {
+			padding: 0;
+		}
 
 		&-wrap {
 			margin-bottom: 20px;
@@ -215,114 +226,6 @@
 				&:hover {
 					color: $g2;
 				}
-			}
-		}
-	}
-
-	&__right-menu {
-		position: absolute;
-		display: none;
-		top: 50%;
-		right: 30px;
-		z-index: 1;
-
-		@media all and (min-width: 992px) {
-			display: block;
-		}
-
-		transform: translateY(-50%);
-
-		&_list {
-			display: flex;
-			flex-direction: column;
-		}
-
-		&_item {
-			margin-bottom: 25px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		&_link {
-			@include text-styling($top-menu-size, 400, $white);
-			display: flex;
-			justify-content: flex-end;
-			text-transform: capitalize;
-			transition: color .3s ease;
-
-			&:hover {
-				color: $g2;
-			}
-		}
-
-		&_text {
-			margin-right: 30px;
-		}
-	}
-
-	&__bottom {
-		background-color: $white;
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			display: none;
-			top: 70px;
-			left: 0;
-			right: 0;
-			width: 100%;
-			min-height: 480px;
-			background: url('../img/header-main.png')no-repeat center;
-			background-size: 100%;
-			transform: translateY(-50%);
-
-			@media all and (min-width: 992px) {
-				display: block;
-			}
-		}
-
-		&-wrapper {
-			padding: 30px 0;
-
-			@media all and (min-width: 768px) {
-				padding: 50px 0;
-			}
-
-			@media all and (min-width: 992px) {
-				padding: 100px 0;
-			}
-
-		}
-
-		&-card {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			@media all and (min-width: 992px) {}
-
-			&_icon {
-				@media all and (min-width: 400px) {
-					margin-right: 15px;
-				}
-			}
-
-			&_wrap {
-				padding-top: 20px;
-			}
-
-			&_title {
-				@include text-styling($middle-size, 500, $g1);
-				text-transform: capitalize;
-				margin-bottom: 5px;
-			}
-
-			&_text {
-				font-family: $sec-font;
-				@include text-styling($base-size, 300, $g2);
 			}
 		}
 	}
