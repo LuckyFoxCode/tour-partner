@@ -28,8 +28,6 @@
 		width: 100%;
 		z-index: 2;
 
-
-
 		&-logo {
 			@include text-styling($middle-size, 500, $white);
 			line-height: 1;
@@ -111,8 +109,16 @@
 	}
 
 	&__content {
-		padding-top: 120px;
+		padding-top: 60px;
 		position: relative;
+
+		@media all and (min-width: 768px) {
+			padding-top: 80px;
+		}
+
+		@media all and (min-width: 992px) {
+			padding-top: 120px;
+		}
 
 		&-wrap {
 			margin-bottom: 20px;
