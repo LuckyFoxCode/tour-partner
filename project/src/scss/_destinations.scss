@@ -25,11 +25,8 @@
       transform: translateY(-10px);
     }
   }
-  &__card.offer {
-    &::before {
+  &__card-offer {
       $position: 24px;
-      content: "Special Offer";
-      display: block;
       padding: 4px 12px;
       background-color: $black;
       position: absolute;
@@ -38,7 +35,13 @@
       z-index: 1;
       @include text-styling($middle-size, 400, $white);
       font-family: $main-font;
-    }
+  }
+
+  &__card-offer.hidden {
+    display: none;
+  }
+  &__card-offer.show {
+    display: block;
   }
 
   &__card-img-wrapper {
