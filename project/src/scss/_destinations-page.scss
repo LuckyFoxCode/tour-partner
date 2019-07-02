@@ -17,6 +17,10 @@ $styles: destinations-page;
     @include text-styling($huge-size, 400, $g1);
   }
 
+  &__change-wiew {
+    cursor: pointer;
+  }
+
   &__card {
     color: $g1;
     font-family: $sec-font;
@@ -36,20 +40,23 @@ $styles: destinations-page;
     }
   }
 
-  &__card.offer {
-    &::before {
-      $position: 24px;
-      content: "Special Offer";
-      display: block;
-      padding: 4px 12px;
-      background-color: $black;
-      position: absolute;
-      top: $position;
-      left: $position;
-      z-index: 1;
-      @include text-styling($middle-size, 400, $white);
-      font-family: $main-font;
-    }
+  &__card-offer {
+    $position: 24px;
+    padding: 4px 12px;
+    background-color: $black;
+    position: absolute;
+    top: $position;
+    left: $position;
+    z-index: 1;
+    @include text-styling($middle-size, 400, $white);
+    font-family: $main-font;
+  }
+
+  &__card-offer.hidden {
+    display: none;
+  }
+  &__card-offer.show {
+    display: block;
   }
 
   &__card-img-wrapper {
