@@ -1,0 +1,98 @@
+.about-us-chernyshenko {
+     @media(min-width: 769px) {
+         padding: 110px 0 110px 0
+    }
+     padding-top: 50px;
+     width: 100%;
+     background-image: url('../img/сoliseum.jpg');
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     &__team {
+         position: relative;
+         background: $white;
+    }
+     .title-text {
+         margin-bottom: 100px;
+         p {
+            @media(max-width: 768px) {
+                 color:$black 
+            }
+             color: $white;
+             font-size: $small-size;
+             text-transform: uppercase;
+             letter-spacing: 0.2em;
+        }
+         h2 {
+            @media(max-width: 768px){
+                 color:$black 
+            }
+             @media(min-width: 320px) and (max-width: 768px) {
+                 font-size: 2.8rem 
+            }
+             color: $white;
+             font-size: $huge-size;
+             font-family: 'Oswald';
+             font-weight: 400;
+             font-style: normal;
+             text-transform: capitalize;
+        }
+    }
+     .img-wrapp {
+         position: relative;
+         padding-top: 67%;
+         width: 100%;
+    }
+     .team-img {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+    }
+     .team-text {
+         @media(min-width: 769px) {
+             padding: 30px 
+        }
+         @media(max-width: 769px) {
+             padding-top: 25px 
+        }
+         h3 {
+             @media(min-width: 1024px) {
+                 padding-bottom: 25px 
+            }
+             font-weight: 500;
+             font-size: $large-size;
+             text-align: center;
+        }
+         p {
+             @media(max-width: 767px) {
+                 padding:10px 50px 50px 50px 
+            }
+             font-size: $base-size;
+             margin-bottom: 0;
+             text-align: center;
+             line-height: 26px;
+             color:#72728c;
+             font-family: 'Open Sans';
+             font-weight: 300;
+             font-style: normal;
+        }
+    }
+     span {
+         z-index: 10;
+         position: absolute;
+         transform: translateX(-50%);
+         top:-37.5px;
+         left:50%;
+         background: $white;
+         border-radius: 50%;
+         width: 75px;
+         height: 75px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+}
