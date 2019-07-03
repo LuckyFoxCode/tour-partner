@@ -44,6 +44,20 @@
 		@media all and (min-width: 768px){
 			font-size: $tour-item;
 		}
+
+		& > *{
+			@include text-styling($small-size, 400, $g2);
+			font-family: $sec-font;
+
+			&:hover{
+				text-decoration: none;
+				color: $g1;
+			}
+
+			@media all and (min-width: 768px){
+				font-size: $tour-item;
+			}
+		}
 	}
 
 	&__for-price{
@@ -84,13 +98,11 @@
 	}
 
 	&__caption{
-		margin-bottom: px_to_rem(5px);
 		@include text-styling($middle-size, 500, $g1);
 		font-family: $main-font;
 		border-bottom: 2px solid $g3;
 
 		@media all and (min-width: 768px){
-			margin-bottom: px_to_rem(10px);
 			font-size: $footer-address;
 			border-bottom-width: 3px;
 		}
@@ -112,31 +124,47 @@
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
-		margin-bottom: px_to_rem(5px);
 		border-bottom: 2px solid $g3;
-		padding-bottom: px_to_rem(5px);
+		padding-bottom: px_to_rem(10px);
 
 		@media all and (min-width: 768px){
-			margin-bottom: px_to_rem(10px);
 			border-bottom-width: 3px;
-			padding-bottom: px_to_rem(10px);
 		}
 	}
 
 	&__item{
-		@include text-styling($small-size, 400, $g3);
-		font-family: $sec-font;
 		margin-left: 5px;
 
 		@media all and (min-width: 992px){
-			font-size: $middle-size;
 			margin-left: 0;
+		}
+
+		&--infrastructure{
+			@include text-styling($small-size, 400, $g3);
+			font-family: $sec-font;
+
+			@media all and (min-width: 768px){
+				font-size: $tour-item;
+			}
+
+			@media all and (min-width: 992px){
+				font-size: $middle-size;
+			}
+		}
+
+		& > .svg-inline--fa{
+			color: $g3;
 		}
 	}
 
 	.svg-inline--fa{
 		width: 15px;
 		height: 15px;
+
+		@media all and (min-width: 768px){
+			width: 23px;
+			height: 23px;
+		}
 
 		@media all and (min-width: 992px){
 			width: 30px;
@@ -145,7 +173,7 @@
 	}
 
 	&__chapter{
-		@include text-styling($small-size, 400, $g1);
+		@include text-styling($tour-item, 400, $g1);
 		font-family: $main-font;
 		margin-bottom: px_to_rem(5px);
 
@@ -155,13 +183,10 @@
 	}
 
 	&__services-item{
-		@include text-styling($small-size, 400, $g2);
-		font-family: $sec-font;
 		position: relative;
 		padding: 3px 0 3px 20px;
 
 		@media all and (min-width: 992px){
-			font-size: $tour-item;
 			padding-right: 30px;
 		}
 
@@ -174,6 +199,15 @@
 			bottom: 0;
 			color: $g2;
 			transform: translateY(-50%);
+		}
+
+		&--infrastructure{
+			@include text-styling($small-size, 400, $g2);
+			font-family: $sec-font;
+
+			@media all and (min-width: 768px){
+				font-size: $tour-item;
+			}
 		}
 
 	}
