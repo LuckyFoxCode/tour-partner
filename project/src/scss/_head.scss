@@ -32,6 +32,7 @@
 			line-height: 1;
 			&:hover {
 				color: $white;
+				text-decoration: none;
 			}
 		}
 		&_link {
@@ -75,6 +76,7 @@
 			font-size: $middle-size;
 			&:hover {
 				color: $white;
+				text-decoration: none;
 			}
 		}
 	}
@@ -126,6 +128,9 @@
 	min-height: 84.64vh;
 	padding: 26.4vh 0 10.15vh 0;
 	position: relative;
+	@media (max-width: 576px) {
+		padding: 13.2vh 0 10.15vh 0;
+	}
 	&_row {
 		position: relative;
 	}
