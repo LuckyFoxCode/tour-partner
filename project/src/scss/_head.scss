@@ -119,6 +119,9 @@
 	font-size: $header-title;
 	margin-bottom: 14vh;
 	line-height: 0.8;
+	@media (max-width: 576px) {
+		margin-bottom: 10vh;
+	}
 	@media (max-width: 768px) {
 		font-size: $about-number;
 	}
@@ -129,7 +132,7 @@
 	padding: 26.4vh 0 10.15vh 0;
 	position: relative;
 	@media (max-width: 576px) {
-		padding: 13.2vh 0 10.15vh 0;
+		padding: 20vh 0 10.15vh 0;
 	}
 	&_row {
 		position: relative;
