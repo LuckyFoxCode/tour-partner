@@ -28,6 +28,7 @@
 	}
 
 	&__block {
+		color: $g2;
 
 		@media all and (min-width: 768px) and (max-width: 991px) {
 	        display: flex;
@@ -75,11 +76,16 @@
 	&__info {
 		font-family: $sec-font;
 		font-size: $base-size;
+		color: inherit;
 		padding-left: 25px;
 
 		@media all and (min-width: 768px) and (max-width: 991px) {
 	        padding-left: 0;
 	    }
+	}
+
+	a.contact__info:hover {
+		color: $black;
 	}
 }
 
