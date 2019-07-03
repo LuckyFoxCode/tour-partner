@@ -5,8 +5,13 @@
      padding-top: 50px;
      width: 100%;
      background-image: url('../img/сoliseum.jpg');
-     background-position: 50% 50%;
      background-repeat: no-repeat;
+     .mb-5 {
+        @media(min-width: 769px) {
+             margin-bottom: 0!important
+        }
+         margin-bottom: 5.3rem!important;
+    }
      &__team {
          position: relative;
          background: $white;
@@ -14,8 +19,8 @@
      .title-text {
          margin-bottom: 100px;
          p {
-            @media(max-width: 768px) {
-                 color:$black 
+             @media(max-width: 768px) {
+                 color:$black
             }
              color: $white;
              font-size: $small-size;
@@ -23,11 +28,11 @@
              letter-spacing: 0.2em;
         }
          h2 {
-            @media(max-width: 768px){
-                 color:$black 
+             @media(max-width: 768px){
+                 color:$black
             }
              @media(min-width: 320px) and (max-width: 768px) {
-                 font-size: 2.8rem 
+                 font-size: 2.8rem
             }
              color: $white;
              font-size: $huge-size;
@@ -54,14 +59,14 @@
     }
      .team-text {
          @media(min-width: 769px) {
-             padding: 30px 
+             padding: 30px
         }
          @media(max-width: 769px) {
-             padding-top: 25px 
+             padding-top: 25px
         }
          h3 {
              @media(min-width: 1024px) {
-                 padding-bottom: 25px 
+                 margin-bottom: 25px
             }
              font-weight: 500;
              font-size: $large-size;
@@ -69,7 +74,7 @@
         }
          p {
              @media(max-width: 767px) {
-                 padding:10px 50px 50px 50px 
+                 padding:10px 50px 50px 50px
             }
              font-size: $base-size;
              margin-bottom: 0;
