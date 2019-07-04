@@ -9,9 +9,16 @@ window.onscroll = () => {
 $(document).ready(function () {
 
 	//Counter About-us
-	$('.about-us__card-number').counterUp({
-		delay: 1,
-		time: 100
+	$('.about-us__card-number').each(function () {
+		$(this).prop('Counter', 0).animate({
+			Counter: $(this).text()
+		}, {
+				duration: 2000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
 	});
 
 	// Owl carousel
