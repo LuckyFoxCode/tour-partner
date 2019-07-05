@@ -1,27 +1,27 @@
+///////////////////////////////////
+///////////////////HEAD////////////
+///////////////////////////////////
+.tel_svg {
+	cursor: pointer;
+	fill: $white;
+}
 .head {
 	width: 100%;
 	position: fixed;
-	z-index: 99999;
+	z-index: 16777271;
+	
 	.menu_bar {
-		@media (max-width: 767px) {
-			display: block;
-		}
-		z-index: 110;
-		background-image: url(../img/menu.svg);
-		display: none;
-		width: $large-size;
-		height: $large-size;
-		position: absolute;
-		top: 12px;
-		right: 4.5vw;
-	}
-	&_list {
+		cursor: pointer;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		align-items: flex-end;
-		@media (max-width: 767px) {
-			flex-direction: column;
-			margin-bottom: 10px;
+		width: $tour-from;
+		height: $tour-from;
+		.line {
+			border-radius: 30px;
+			background-color: $white;
+			height: 14%;
+			width: 100%;
 		}
 	}
 	&__items {
@@ -29,68 +29,102 @@
 			color: $white;
 			font-weight: 500;
 			font-size: $large-size;
+			line-height: 1;
 			&:hover {
 				color: $white;
+				text-decoration: none;
 			}
 		}
 		&_link {
 			@media (max-width: 767px) {
-				display: none;
-				text-align: right;
+				min-height: 0;
 			}
+			display: flex;
+			align-items: flex-end;
+			min-height: 93px;
 			text-align: center;
-			&.active {
-				&:before {
-					@media (max-width: 767px) {
-						display: none;
-					}
-					content: "";
-					display: block;
-					width: 1px;
-					height: 75px;
-					background-color: $white;
-					margin: auto;
-				}
-			}
 		}
 		&_linked {
 			color: $white;
 			font-size: $top-menu-size;
+			line-height: 1;
 			&:hover {
 				color: $white;
+				text-decoration: none;
+			}
+			&:before {
+				@media (max-width: 767px) {
+					display: none;
+				}
+				content: "";
+				display: block;
+				width: 1px;
+				height: 0;
+				background-color: $white;
+				margin: auto;
+				transition: all .15s linear;
 			}
 		}
 		&_tel {
 			@media (max-width: 991px) {
-				display: none;
+				font-size: $top-menu-size;
+				white-space: nowrap;
 			}
-			text-align: right;
-			&_link {
+			line-height: 1.3;
+			color: $white;
+			font-weight: 500;
+			font-size: $middle-size;
+			&:hover {
 				color: $white;
-				font-weight: 500;
-				font-size: $middle-size;
-				&:hover {
-					color: $white;
-				}
-
+				text-decoration: none;
 			}
 		}
 	}
 }
 
+.active {
+	&:before {
+		@media (max-width: 767px) {
+			display: none;
+		}
+		content: "";
+		display: block;
+		width: 1px;
+		height: 75px;
+		background-color: $white;
+		margin: auto;
+		transition: all .15s linear;
+	}
+	&:hover:before {
+		@media (max-width: 767px) {
+			display: none;
+		}
+		content: "";
+		display: block;
+		width: 1px;
+		height: 75px;
+		background-color: $white;
+		margin: auto;
+		transition: all .15s linear;
+	}
+}
+
+/////////////////////////////////////////////////////
+////////////////////////////HEAD/////////////////////
+/////////////////////////////////////////////////////
+
 .search {
-	min-height: 63vh;
-	padding-top: 30vh;
+	min-height: 60vh;
+	padding: 22.5vh 0 10vh 0;
 	position: relative;
 	&_row {
 		position: relative;
-		z-index: 9;
 	}
 	&:before {
 		content: "";
 		display: block;
 		position: absolute;
-		background-image: url(../img/head_about.jpg);
+		background-image: url(../img/head_contact.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
@@ -103,8 +137,10 @@
 	&__choose {
 		@media (max-width: 1260px) {
 			min-width: 100vw;
-		} 
-		z-index: -2;
+		}
+		@media (max-width: 576px) {
+			padding: 0;
+		}
 		padding: 25px 60px 80px 60px;
 		min-width: 1260px;
 		background-color: rgba($white, .26);
@@ -116,51 +152,54 @@
 	}
 
 	&__form {
-		width: 100%;
 		&_head {
 			@media (max-width: 1200px) {
 				min-width: 10px;
-			} 
+			}
+			@media (max-width: 991px) {
+				width: 100%;
+			}
 			background-color: $white;
 			text-align: center;
 			border-radius: 10px 10px 0px 0px;
 			min-width: 255px;
 			min-height: 55px;
-			padding-top: 12px;
-			padding-bottom: 22px;
+			padding: 12px 15px 22px 15px;
 			font-size: $middle-size;
 		}
 		&_input {
 			margin-top: -10px;
 			background-color: $white;
+			margin: 0 -15px 0 -15px;
 			padding: 20px 30px 20px 30px;
-			justify-content: space-between;
 			&_text {
 				@media (max-width: 1200px) {
-					max-width: 100%;
+					min-width: 100%;
 				} 
+				padding: 0 15px 0 15px;
 				min-height: 50px;
 				background-color: #F2F5F6;
 				border: none;
 				outline: none;
-				max-width: 160px;
+				min-width: 160px;
 				color: $g2;
 				&:placeholder {
+					color: $g2;
 				}
 			}
 			.city {
 				@media (max-width: 1200px) {
-					max-width: 100%;
-				} 
+					min-width: 100%;
+				}
 				max-height: 50px;
-				max-width: 255px;
+				min-width: 255px;
 			}
 			.bud {
 				@media (max-width: 1200px) {
-					max-width: 100%;
-				} 
+					min-width: 100%;
+				}
 				max-height: 50px;
-				max-width: 190px;
+				min-width: 190px;
 			}
 		}
 	}
