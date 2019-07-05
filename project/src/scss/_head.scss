@@ -32,6 +32,7 @@
 			line-height: 1;
 			&:hover {
 				color: $white;
+				text-decoration: none;
 			}
 		}
 		&_link {
@@ -75,6 +76,8 @@
 			font-size: $middle-size;
 			&:hover {
 				color: $white;
+				text-decoration: none;
+
 			}
 		}
 	}
@@ -112,8 +115,9 @@
 /////////////////////////////////////////////////////
 
 .search {
-	min-height: 62vh;
-	padding: 28.5vh 0 6.2vh 0;
+
+	min-height: 60vh;
+	padding: 22.5vh 0 10vh 0;
 	position: relative;
 	&_row {
 		position: relative;

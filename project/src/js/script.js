@@ -21,12 +21,12 @@ $(document).ready(function() {
 
 	$(window).resize(function(){
 		if ($(window).width() > 767) {
-			$(".head_nav").css("display", "flex");
+			$(".head_nav, .head_tel").css("display", "flex");
 		}
 	});
 	$(window).resize(function(){
 		if ($(window).width() < 768) {
-			$(".head_nav").css("display", "none");
+			$(".head_nav, .head_tel").css("display", "none");
 		}
 	});
 
@@ -43,16 +43,6 @@ $(document).ready(function() {
 			if (($(".head_tel").css("display") == "none") && ($(".head_nav").css("display") == "none") && window.pageYOffset == 0) {
 				$(".header").removeClass("scroll_head");
 			}
-		}
-	});
-	$(window).resize(function(){
-		if ($(window).width() > 767) {
-			$(".head_tel").css("display", "flex");
-		}
-	});
-	$(window).resize(function(){
-		if ($(window).width() < 768) {
-			$(".head_tel").css("display", "none");
 		}
 	});
 });
