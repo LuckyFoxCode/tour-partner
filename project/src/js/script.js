@@ -20,6 +20,7 @@ window.onscroll = () => {
 	}
 };
 
+
 //  $({someValue: 0}).animate({someValue: 17}, {
 //  	duration: 2000,
 //  	easing:'swing',
@@ -104,4 +105,43 @@ $(document).ready( function() {
             },
         }
     });
+
+    const data = {
+        spincrement1: 17,
+        spincrement2: 213,
+        spincrement3: 11923,
+        spincrement4: 15
+    };
+
+    const spincrement1 = document.querySelector('.spincrement1');
+    const spincrement2 = document.querySelector('.spincrement2');
+    const spincrement3 = document.querySelector('.spincrement3');
+    const spincrement4 = document.querySelector('.spincrement4');
+
+
+    function fakeCounter(targetNode) {
+        let count = Math.ceil(data[targetNode.className] / 1000);
+        if(count >= 10) {
+            count *= 2;
+        } else if(count >= 20) {
+            count *= 3;
+        }
+        const timing = 1;
+        let i = 1;
+        let interval = setTimeout(function counter(){
+            targetNode.innerText = i;
+            i = i + count;
+            if(i > data[targetNode.className]) {
+                targetNode.innerText = data[targetNode.className];
+                clearInterval(interval);
+                return;
+            }
+            interval = setTimeout(counter, timing);
+        }, timing);
+    }
+
+    fakeCounter(spincrement1);
+    fakeCounter(spincrement2);
+    fakeCounter(spincrement3);
+    fakeCounter(spincrement4);
 });

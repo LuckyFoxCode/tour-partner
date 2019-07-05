@@ -1,15 +1,18 @@
 <div class="wrapper">
-<div class="content">
+	<div class="content">
 
-	<%- include('sections/head_home_page.html'); -%>
+		<%- include('sections/head_home_page.html'); -%>
 
-	<%- include('sections/about_us.ejs'); -%>
+		<%- include('sections/about_us.ejs'); -%>
+		<script type="text/javascript">
+			$(".num").counterUP({delay:10,time:2000});
+		</script>
 
-	<%- include('sections/about-us-chernyshenko.html'); -%>
+		<%- include('sections/about-us-chernyshenko.html'); -%>
 
-	<%- include('sections/team'); -%>
+		<%- include('sections/team'); -%>
 
-</div><%# End content %>
+	</div><%# End content %>
 
-<%- include('sections/footer.html'); -%>
+	<%- include('sections/footer.html'); -%>
 </div>	<%# End wrapper %>
