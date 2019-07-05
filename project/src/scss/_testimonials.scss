@@ -1,0 +1,146 @@
+// SECTION TESTIMONIALS START
+.testimonials {
+	position: relative;
+	background: url('../img/bg-testimonials.jpg') no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 105px 0 100px 0;
+
+	@media screen and (max-width: 767px) {
+		padding: 55px 15px;
+	}
+
+	.testimonials__carousel {
+		font-family: $main-font;
+		font-weight: 400;
+		color: $white;
+		z-index: 0;
+
+		&--card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+
+		&--subtitle {
+			font-size: $small-size;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			margin-bottom: 35px;
+
+			@media screen and (max-width: 767px) {
+				font-size: px_to_rem(11px);
+			}
+		}
+
+		&--title {
+			font-size: $huge-size;
+			text-transform: capitalize;
+			margin-bottom: 25px;
+
+			@media screen and (max-width: 767px) {
+				font-size: $large-size;
+			}
+		}
+
+		&--description {
+			font-family: $sec-font;
+			font-size: $large-size;
+			font-style: italic;
+			text-align: center;
+			margin-bottom: 90px;
+
+			@media screen and (max-width: 767px) {
+				font-size: $base-size;
+				margin-bottom: 55px;
+			}
+		}
+
+		&--authorName {
+			font-size: $middle-size;
+			text-transform: uppercase;
+
+			@media screen and (max-width: 767px) {
+				font-size: $top-menu-size;
+			}
+		}
+
+		&--authorPosition {
+			font-size: $small-size;
+			text-transform: uppercase;
+			margin-left: 10px;
+
+			@media screen and (max-width: 767px) {
+				font-size: $blog-subtitle;
+			}
+		}
+	}
+
+	.testimonials__menu {
+		display: none;
+		z-index: 1;
+
+		@media all and (min-width: 768px) and (max-width: 991px){
+			position: absolute;
+			display: block;
+			right: 0;
+			transform: translateY(-230%);
+		}
+
+		@media all and (min-width: 992px) and (max-width: 1699px){
+			position: absolute;
+			display: block;
+			top: 50%;
+			right: 0;
+			transform: translateY(-190%);
+		}
+
+		@media all and (min-width: 1700px) {
+			position: absolute;
+			display: block;
+			top: 50%;
+			right: -20%;
+			transform: translateY(-50%);
+		}
+
+		&--list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&--item {
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media all and (min-width: 768px) and (max-width: 991px){
+				margin-bottom: 15px;
+			}
+		}
+
+		&--link {
+			@include text-styling($top-menu-size, 400, $white);
+			display: flex;
+			text-decoration: none;
+			justify-content: flex-end;
+			text-transform: capitalize;
+			transition: color .3s ease;
+
+			&:hover {
+				color: $g2;
+				text-decoration: none;
+			}
+		}
+
+		&--text {
+			margin-right: 30px;
+		}
+	}
+}
+// SECTION TESTIMONIALS END
