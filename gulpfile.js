@@ -142,6 +142,9 @@ gulp.task(task.validator, () => {
 
 gulp.task(task.dev.js, () => {
 	return gulp.src(path.src.js, { allowEmpty: true })
+	.pipe($.babel({
+		presets: ['@babel/env']
+	}))
 	.pipe($.rigger())
 	.pipe(gulp.dest(path.app.js))
 	.pipe(browserSync.stream());
@@ -149,6 +152,9 @@ gulp.task(task.dev.js, () => {
 
 gulp.task(task.build.js, () => {
 	return gulp.src(path.src.js, { allowEmpty: true })
+	.pipe($.babel({
+		presets: ['@babel/env']
+	}))
 	.pipe($.rigger())
 	.pipe($.uglify().on('error', $.notify.onError("JS-Error: <%= error.message %>")))
 	.pipe(gulp.dest(path.app.js))
