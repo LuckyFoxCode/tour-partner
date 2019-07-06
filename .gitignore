@@ -1,6 +1,7 @@
 node_modules
 package-lock.json
-project/app
+# project/app/
+project/src/
 template
 *.psd
 *.zip
