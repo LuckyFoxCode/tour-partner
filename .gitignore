@@ -3,4 +3,5 @@ package-lock.json
 *.psd
 *.zip
 
-/project/app/
+# /project/app/
+/project/src/
