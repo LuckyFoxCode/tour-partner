@@ -36,8 +36,14 @@
 		margin-right: 4px;
 		color:$g1;
 
+		@media all and (min-width:993px) and (max-width: 1199px) {
+			font-size: 27px;
+			line-height: 27px;
+		}
+
 		@media all and (max-width: 577px) {
 			font-size: 30px;
+			line-height: 30px;
 		}
 	}
 
@@ -68,6 +74,10 @@
 		line-height: 41px;
 		text-transform: capitalize;
 		color:$g1;
+
+		@media all and (min-width:993px) and (max-width: 1199px) {
+			line-height: 32px;
+		}
 	}
 
 	&__subtitle {
@@ -81,13 +91,21 @@
 		color:$g3;
 	}
 
-	&__text {
+	&__text-wrap {
 		margin-bottom: 40px;
+
+		@media all and (min-width:993px) and (max-width: 1199px) {
+			margin-bottom: 21px;
+		}
+	}
+
+	&__text {
 		font-family: Open Sans;
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 26px;
+		height:52px;
 		color:$g2;
 		@media all and (max-width: 992px) {
 			font-size: 18px;
@@ -125,14 +143,20 @@
 
 	&__block-photo {
 		margin-bottom: 30px;
-		@media all and (max-width: 768px) {
-			margin-bottom: 30px;
+		@media all and (min-width:993px) and (max-width: 1199px) {
+			margin-bottom: 0px;
 		}
 	}
 
 	&__description-news {
 		@media all and (max-width: 769px) {
 			align-items: center;
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media all and (min-width:993px) and (max-width: 1199px) {
+			justify-content: center;
 			display: flex;
 			flex-direction: column;
 		}

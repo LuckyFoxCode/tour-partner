@@ -63,3 +63,57 @@ window.onscroll = () => {
 		$(".header").removeClass("scroll_head");
 	}
 }
+
+
+	$('.news-section__text').dotdotdot();
+// (function($) {
+
+// 	if ($(window).width() >= 993 && $(window).width() <= 1199) {
+// 		var block = document.querySelector('.news-section__text');
+// 		while (block.clientHeight > 160) {
+// 			let testText = block.innerText;
+// 			let text = testText.slice(0, testText.length - 1) + ' ...';
+// 			alert(text);
+// 			// break;			
+
+// 		}
+// 		// text = block.innerHTML,
+// 		// clone = document.createElement('div');
+
+// 		// clone.style.position = 'absolute';
+// 		// clone.style.visibility = 'hidden';
+// 		// clone.style.width = block.clientWidth + 'px';
+// 		// clone.style.height = '183.4' + 'px';
+// 		// clone.innerHTML = text;
+// 		// document.body.appendChild(clone);
+
+// 		// var l = text.length - 1;
+// 		// for (; l >= 0 && clone.clientHeight > block.clientHeight; --l) {
+// 		// 	clone.innerHTML = text.substring(0, l) + '...';
+// 		// }
+
+// 		// block.innerHTML = clone.innerHTML;
+
+
+// 	}
+
+// }(jQuery));
+
+// // if ($(window).width() >= 993 && $(window).width() <= 1199) {
+
+// // 	function truncateByHeight(element, height) {
+// // 		var textContent = typeof element.textContent === 'undefined' ? 'innerText' : 'textContent';
+// // 		var parts = element[textContent].split(' ');
+
+// // 		while (parts.pop() && element.clientHeight > height) {
+// // 			element[textContent] = parts.join(' ');
+// // 		}
+// // 	}
+
+
+// // 	var element = document.querySelector('.news-section__text');
+// // 	element.innerText ="hi";
+
+// // 	truncateByHeight(element, 183.4);
+
+// // }
